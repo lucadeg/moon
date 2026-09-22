@@ -1,16 +1,9 @@
+
 name: Benchmark
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - master
-      - develop-*
-  pull_request:
-  # Not supported by CodSpeed!
-  # issue_comment:
-  #   types: [created]
-
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true

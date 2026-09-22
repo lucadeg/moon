@@ -1,20 +1,9 @@
+
 name: Rust
 
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    paths:
-      - .cargo/config.toml
-      - .github/workflows/rust.yml
-      - crates/**
-      - legacy/**
-      - wasm/**
-      - Cargo.lock
-      - Cargo.toml
-      - rust-toolchain.toml
-
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true

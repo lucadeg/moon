@@ -1,24 +1,9 @@
+
 name: Moon
 
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    paths:
-      - .cargo/config.toml
-      - .github/workflows/moon.yml
-      - .moon/*
-      - crates/**
-      - legacy/**
-      - packages/**
-      - website/**
-      - package.json
-      - yarn.lock
-      - Cargo.lock
-      - Cargo.toml
-      - rust-toolchain.toml
-
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 env:
   # For setup-rust
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
